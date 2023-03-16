@@ -27,17 +27,6 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-rules-dynamic-features.pro'
         }
-        debug {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-rules-dynamic-features.pro'
-            applicationIdSuffix ".debug"
-            debuggable true
-        }
-        staging {
-            initWith debug
-            manifestPlaceholders = [hostName:"internal.example.com"]
-            applicationIdSuffix ".staging"
-        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
